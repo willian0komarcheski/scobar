@@ -1,7 +1,7 @@
 // app.js
 
 const express = require('express');
-const produtoRoutes = require('./src/routes/ProdutoRoute');
+const Routes = require('./src/routes/Route');
 const sequelize = require('./src/Config/DataBase');
 
 const app = express();
@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // Rotas de produtos
-app.use('/api', produtoRoutes);
+app.use('/api', Routes);
 
 // Iniciar o servidor
 const PORT = process.env.PORT || 3000;
